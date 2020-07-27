@@ -1,11 +1,10 @@
 package monitor.service;
 
-import io.micronaut.core.annotation.Introspected;
-
+import javax.inject.Singleton;
 import java.util.Arrays;
 import java.util.List;
 
-@Introspected
+@Singleton
 public class MessageService {
 
     public List<String> getMessages() {
