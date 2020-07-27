@@ -1,0 +1,9 @@
+scrape_configs:
+    - job_name: 'MonitoringAPI'
+      scrape_interval: 15s
+      scheme: https
+      tls_config:
+          insecure_skip_verify: true
+      metrics_path: /prometheus
+      static_configs:
+          - targets: ['127.0.0.1:8080']
