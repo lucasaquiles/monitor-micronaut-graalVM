@@ -26,6 +26,10 @@ time curl localhost:8080/message
 ```
 
 ```
+siege -c5000 -t60S --content-type 'application/json' 'http://localhost:8080/message POST {"dateCreated":"2020-07-28T16:45:00", "content":"teste teste teste"}' -p
+```
+
+```
 time curl localhost:8080/metrics
 ```
 
