@@ -33,7 +33,9 @@ time curl localhost:8080/metrics
 time curl localhost:8080/prometheus
 ```
 
-a partir da dependência `implementation("io.micronaut.micrometer:micronaut-micrometer-registry-prometheus")` é possível coletar métricas da aplicação e indexar no prometheus via registry do micrometer que pode ser consultada pelo path `/prometheus`. Por default o prometheus usa o path `/metrics` para fazer o scrap das metricas, isso gera conflito com o core de gerenciamento de metricas do micronautic. No arquivo `prometheus.yml` é criado uma nova config informando o endpoint que deve ser consultado pelo prometheus para fazer scrap das métricas registradas
+a partir da dependência `implementation("io.micronaut.micrometer:micronaut-micrometer-registry-prometheus")` é possível coletar métricas da aplicação e indexar no prometheus via registry do micrometer que pode ser consultada pelo path `/prometheus`. 
+
+Por default o prometheus usa o path `/metrics` para fazer o scrap das metricas, isso gera conflito com o core de gerenciamento de metricas do micronautic. No arquivo `prometheus.yml` é criado uma nova config informando o endpoint que deve ser consultado pelo prometheus para fazer scrap das métricas registradas
 
 `docker-compose -f prometheus-compose.yml up -d`
 
